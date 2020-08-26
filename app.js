@@ -112,10 +112,13 @@ app.use(function (err, req, res, next) {
 });
 //mongodb+srv://arqam:arqam@mern1-siiuo.mongodb.net/FamilyMart?retryWrites=true&w=majority
 mongoose
-  .connect("mongodb://localhost/FamilyMart", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://arqam:arqam@mern1-siiuo.mongodb.net/FamilyMart?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("Connected to mongoDB");
   })
