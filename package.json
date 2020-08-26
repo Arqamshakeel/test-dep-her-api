@@ -1,9 +1,10 @@
 {
-  "name": "family-mart-api",
+  "name": "test-dep-her-api",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
