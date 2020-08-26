@@ -6,7 +6,6 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var config = require("config");
-var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var products = require("./routes/products");
 var bodyParser = require("body-parser");
@@ -44,8 +43,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, "public")));
-
-app.use("/", indexRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/products", products);
 app.use(express.static(path.join(__dirname, "client/build")));
