@@ -214,7 +214,7 @@ io.on("connection", (socket) => {
     return;
   });
 });
-http.listen(4002, () => {
+http.listen(4001, () => {
   console.log("Listening on port 4001");
 });
 
