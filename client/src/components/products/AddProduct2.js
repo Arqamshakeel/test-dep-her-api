@@ -34,14 +34,11 @@ const AddProduct2 = (props) => {
   let check = 0;
   const handleImage = (event) => {
     fileUpload(event).then((data) => {
-      //imgBase64 = data.base64;
       setImgBase64(data.base64);
       setCheck2(true);
-      //buffer = Buffer.from(imgBase64, "utf-8");
       console.log(buffer + "buffer");
       var lengthInKB = data.size / 1000;
       console.log(data.size / 1000);
-      //console.log(imgBase64);
       if (lengthInKB > 600) {
         alert("File size should not be greater than 600KB.");
         setImg({ file: "" });
@@ -54,23 +51,6 @@ const AddProduct2 = (props) => {
     check = 1;
   };
 
-  // const apiGETsingleproduct = () => {
-  //   productService
-  //     .getsingleProduct(props.match.params.id)
-  //     .then(function (data) {
-  //       console.log(data);
-  //       setName(data.name);
-  //       setStock(data.stock);
-  //       setPrice(data.price);
-  //       //setName(data.name);
-  //       setCompany(data.company);
-  //       setImg({ file: data.image.data });
-  //       setImg2(data.image.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // };
   const apiPutproduct = () => {
     productService
       .postProduct({
@@ -81,11 +61,7 @@ const AddProduct2 = (props) => {
         img: "data:image/jpeg;base64," + imgBase64,
         company: company,
       })
-      .then(function (data) {
-        //setImgBuffer(data);
-        // console.log("Posted");
-        //console.log(imgBase64);
-      })
+      .then(function (data) {})
       .catch(function (error) {
         console.log(error);
       });
@@ -160,23 +136,6 @@ const AddProduct2 = (props) => {
                 productTags={productTags}
               ></CustomTags>
               <FormControl fullWidth>
-                {/* <InputLabel id="demo-simple-select-outlined-label">
-                  Tags
-                </InputLabel>
-                <Select
-                  fullWidth
-                  labelId="demo-simple-select-outlined-label"
-                  id="demo-simple-select-outlined"
-                  value={tags}
-                  onChange={(e) => {
-                    settags(e.target.value);
-                  }}
-                  label="Area"
-                >
-                  <MenuItem value={"wapdatown"}>Snacks</MenuItem>
-                  <MenuItem value={"citi"}>Drinks</MenuItem>
-                  <MenuItem value={"canal"}>Chocolates</MenuItem>
-                </Select> */}
                 <Button
                   style={{ marginTop: "10px" }}
                   variant="contained"
