@@ -214,8 +214,8 @@ io.on("connection", (socket) => {
     return;
   });
 });
-http.listen(4001, () => {
-  console.log("Listening on port 4001");
+http.listen(80, () => {
+  console.log("Listening on port 80");
 });
 
 // var storage = multer.diskStorage({
