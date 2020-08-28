@@ -18,7 +18,7 @@ import MuiAlert from "@material-ui/lab/Alert";
 import productService from "../../services/ProductServices";
 //import axios from "axios";
 import io from "socket.io-client";
-const socket = io.connect("http://arqam.familymart.cloudns.cl:80");
+const socket = io.connect("http://arqam.familymart.cloudns.cl:4001");
 // const socket = io.connect(
 //   "http://ec2-18-221-158-145.us-east-2.compute.amazonaws.com:4001"
 // );
