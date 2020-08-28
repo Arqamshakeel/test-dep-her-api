@@ -67,8 +67,8 @@ import EmptyStockProducts from "../products/EmptyStockProducts";
 import ProductCategory from "../List/ProductCategory";
 import ShowWithTags from "../products/ShowWithTags";
 import Footer from "../footer/Footer";
-//const socket = io.connect("http://localhost:4001");
-const socket = io.connect("http://arqam.familymart.cloudns.cl:80");
+//consts socket = io.connect("http://localhost:4001");
+const socket = io.connect("http://arqam.familymart.cloudns.cl:80:4001");
 // const socket = io.connect(
 //   "http://ec2-18-221-158-145.us-east-2.compute.amazonaws.com:8080"
 // );
