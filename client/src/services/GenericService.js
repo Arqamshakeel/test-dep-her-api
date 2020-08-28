@@ -1,9 +1,10 @@
 import axios from "axios";
 
+//axios.defaults.baseURL = "http://localhost:5001/api/";
 // axios.defaults.baseURL = "https://test-express-arqam.herokuapp.com/api/";
 //axios.defaults.baseURL = "https://test-familymart.herokuapp.com/api";
 axios.defaults.baseURL =
-  "http://ec2-18-219-5-52.us-east-2.compute.amazonaws.com:8080/api/";
+  "http://ec2-18-219-5-52.us-east-2.compute.amazonaws.com:80/api/";
 // axios.defaults.baseURL =
 //   "http://ec2-18-221-158-145.us-east-2.compute.amazonaws.com:5000/api/";
 // //amazon working
