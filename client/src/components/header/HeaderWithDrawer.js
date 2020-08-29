@@ -68,6 +68,14 @@ import ProductCategory from "../List/ProductCategory";
 import ShowWithTags from "../products/ShowWithTags";
 import Footer from "../footer/Footer";
 import Push from "push.js";
+Push.config({
+  serviceWorker: "../../../public/customServiceWorker.js", // Sets a custom service worker script
+  fallback: function (payload) {
+    // Code that executes on browsers with no notification support
+    // "payload" is an object containing the
+    // title, body, tag, and icon of the notification
+  },
+});
 //consts socket = io.connect("http://localhost:4001");
 //const socket = io.connect("https://familymart.gq:4001");
 const socket = io.connect("https://familymart.gq");
