@@ -52,23 +52,6 @@ export function register(config) {
       }
     });
   }
-
-  if ("serviceWorker" in navigator) {
-    console.log(
-      "SERVICE WORKER -> REGISTER -> Try to register the service worker"
-    );
-    navigator.serviceWorker
-      .register("./sw.js")
-      .then(function (reg) {
-        console.log("SERVICE WORKER -> REGISTER -> Successfully registered!");
-      })
-      .catch(function (err) {
-        console.log(
-          "'SERVICE WORKER -> REGISTER -> Registration failed! This happened: ",
-          err
-        );
-      });
-  }
 }
 
 function registerValidSW(swUrl, config) {
