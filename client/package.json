@@ -15,6 +15,7 @@
     "fuctbase64": "^1.4.0",
     "jwt-decode": "^2.2.0",
     "material-table": "^1.68.0",
+    "push.js": "^1.0.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-material-ui-carousel": "^1.7.1",

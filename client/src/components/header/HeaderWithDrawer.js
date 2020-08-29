@@ -67,6 +67,7 @@ import EmptyStockProducts from "../products/EmptyStockProducts";
 import ProductCategory from "../List/ProductCategory";
 import ShowWithTags from "../products/ShowWithTags";
 import Footer from "../footer/Footer";
+import Push from "push.js";
 //consts socket = io.connect("http://localhost:4001");
 //const socket = io.connect("https://familymart.gq:4001");
 const socket = io.connect("https://familymart.gq");
@@ -281,7 +282,17 @@ function ResponsiveDrawer(props) {
     socket.on("client", (data) => {
       dispatch(incrementOrder());
 
-      if (userService.isAdmin()) buttonClick();
+      //if (userService.isAdmin()) buttonClick();
+      if (userService.isAdmin())
+        Push.create("Family Mart", {
+          body: "You got new order!",
+          icon: "/icon.png",
+          timeout: 5000,
+          onClick: function () {
+            window.focus();
+            this.close();
+          },
+        });
       // dispatch(incrementOrder());
     });
   }, []);
