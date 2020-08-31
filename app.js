@@ -113,13 +113,10 @@ app.use(function (err, req, res, next) {
 //mongodb://<dbuser>:<dbpassword>@ds127260.mlab.com:27260/heroku_xtg78bjw
 //mongodb+srv://arqam:arqam@mern1-siiuo.mongodb.net/FamilyMart?retryWrites=true&w=majority
 mongoose
-  .connect(
-    "mongodb+srv://arqam:arqam@mern1-siiuo.mongodb.net/FamilyMart?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect("mongodb://localhost:27017/FamilyMart", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connected to mongoDB");
   })

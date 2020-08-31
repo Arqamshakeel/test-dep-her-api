@@ -295,7 +295,7 @@ function ResponsiveDrawer(props) {
         Push.create("Family Mart", {
           body: "You got new order!",
           icon: "/icon.png",
-          timeout: 5000,
+          //timeout: 5000,
           onClick: function () {
             window.focus();
             this.close();
