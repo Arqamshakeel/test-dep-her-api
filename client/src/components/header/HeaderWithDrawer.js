@@ -241,16 +241,16 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const buttonClick = () => {
-    console.log("Notification");
-    addNotification({
-      title: "Family Mart",
-      subtitle: "This is a subtitle",
-      message: "New Order",
-      // theme: "darkblue",
-      native: true, // when using native, your OS will handle theming.
-    });
-  };
+  // const buttonClick = () => {
+  //   console.log("Notification");
+  //   addNotification({
+  //     title: "Family Mart",
+  //     subtitle: "This is a subtitle",
+  //     message: "New Order",
+  //     // theme: "darkblue",
+  //     native: true, // when using native, your OS will handle theming.
+  //   });
+  // };
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
