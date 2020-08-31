@@ -292,7 +292,7 @@ function ResponsiveDrawer(props) {
 
       //if (userService.isAdmin()) buttonClick();
       if (userService.isAdmin())
-        Push.create("Family Mart", {
+        Push.create("Family Mart2222", {
           body: "You got new order!",
           icon: "/icon.png",
           requireInteraction: true,
